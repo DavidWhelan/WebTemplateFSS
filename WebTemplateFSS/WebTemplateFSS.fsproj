@@ -10,7 +10,6 @@
 
 	<ItemGroup>
 		<Compile Include="Routes\IndexRoutes.fs" />
-		<Compile Include="Views\Shared\Theme.fs" />
 		<Compile Include="Views\Shared\Layout.fs" />
 		<Compile Include="Views\IndexView.fs" />
 		<Compile Include="Controllers\ErrorController.fs" />
@@ -22,7 +21,6 @@
 		<PackageReference Include="Falco" Version="5.2.0" />
 		<PackageReference Include="Falco.Datastar" Version="1.3.0" />
 		<PackageReference Include="Falco.Markup" Version="1.4.0" />
-		<PackageReference Include="Fss-lib.Falco" Version="3.0.0" />
 	</ItemGroup>
 
 	<Target Name="FSharpLint" AfterTargets="BeforeBuild" Condition="'$(DesignTimeBuild)' != 'true'">
