@@ -8,6 +8,13 @@
         "dotnet-fsharplint"
       ],
       "rollForward": false
+    },
+    "fss-lib.builder": {
+      "version": "3.0.0",
+      "commands": [
+        "Fss.Build"
+      ],
+      "rollForward": false
     }
   }
 }

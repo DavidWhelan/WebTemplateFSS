@@ -23,6 +23,11 @@
 		<PackageReference Include="Falco.Markup" Version="1.4.0" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <Folder Include="wwwroot\css\" />
+	</ItemGroup>
+
+
 	<Target Name="FSharpLint" AfterTargets="BeforeBuild" Condition="'$(DesignTimeBuild)' != 'true'">
 		<Exec Command="dotnet fsharplint -f msbuild lint --lint-config $(MSBuildThisFileDirectory)/fsharplint.json $(MSBuildProjectFullPath)" ConsoleToMsBuild="true" IgnoreExitCode="false" />
 	</Target>

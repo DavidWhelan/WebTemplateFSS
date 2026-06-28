@@ -1,0 +1,12 @@
+{
+	"FssSource": {
+		"Path": "WebTemplateFss.Style",
+		"Name": "WebTemplateFss.Style",
+		"Namespace": "Index"
+	},
+	"GeneratedProject": {
+		"Path": "WebTemplateFss.GeneratedStyles",
+		"Name": "WebTemplateFss.GeneratedStyles"
+	},
+	"CssOutputPath": "WebTemplateFss.Web/wwwroot/css/"
+}
