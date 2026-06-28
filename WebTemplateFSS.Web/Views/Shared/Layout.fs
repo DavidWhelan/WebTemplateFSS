@@ -4,6 +4,10 @@ open Falco.Markup
 
 let scripts = [ _script [ _type_ "module"; _src_ "js/lib/datastar.js" ] [] ]
 
+let styles =
+    [ _link [ _rel_ "stylesheet"; _href_ "css/styles.css" ]
+      _link [ _rel_ "stylesheet"; _href_ "css/fonts.css" ] ]
+
 let template (content: XmlNode list) =
 
-    _html [ _lang_ "en" ] [ _head [] []; _body [] (content @ scripts) ]
+    _html [ _lang_ "en" ] [ _head [] styles; _body [] (content @ scripts) ]
