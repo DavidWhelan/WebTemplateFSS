@@ -7,4 +7,5 @@ module Attr =
 
 [<AutoOpen>]
 module Html =
+    // fsharplint:disable-next-line
     let inline _classList_ s = Attr.classList s

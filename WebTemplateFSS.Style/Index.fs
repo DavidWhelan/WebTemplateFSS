@@ -1,3 +1,3 @@
 ﻿module Index
 
-let styles = []
+let styles = [ btn; btnPrimary ]
