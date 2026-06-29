@@ -9,6 +9,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<Compile Include="Extensions\Markup.fs" />
 		<Compile Include="Routes\IndexRoutes.fs" />
 		<Compile Include="Views\Shared\Layout.fs" />
 		<Compile Include="Views\IndexView.fs" />
