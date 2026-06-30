@@ -12,17 +12,17 @@ let page =
         [ _styleList [] Buttons.btnStyles ]
         [ _h2 [ _id_ "hello" ] [ _text "Hello, World!" ]
           _button
-              [ Ds.onClick (Ds.get IndexRoutes.clickRoute)
-                _classList_ [ Buttons.btnPrimary ] ]
+              [ Ds.onClick (Ds.get (IndexRoutes.clickURL "Primary"))
+                _class_ Buttons.btnPrimary ]
               [ _text "Click Me" ]
           _button
-              [ Ds.onClick (Ds.get IndexRoutes.clickRoute)
-                _classList_ [ Buttons.btnSecondary ] ]
+              [ Ds.onClick (Ds.get (IndexRoutes.clickURL "Secondary"))
+                _class_ Buttons.btnSecondary ]
               [ _text "Click Me" ]
           _button
-              [ Ds.onClick (Ds.get IndexRoutes.clickRoute)
-                _classList_ [ Buttons.btnTertiary ] ]
+              [ Ds.onClick (Ds.get (IndexRoutes.clickURL "Tertiary"))
+                _class_ Buttons.btnTertiary ]
               [ _text "Click Me" ] ]
 
-let clickResponse =
-    _div [ _id_ "hello" ] [ _h2 [] [ _text "Hello, World, from Server!" ] ]
+let clickResponse color =
+    _div [ _id_ "hello" ] [ _h2 [] [ _text $"Hello, World, from Server! The button color was {color}" ] ]

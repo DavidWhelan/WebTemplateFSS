@@ -8,6 +8,8 @@ open Falco.Routing
 
 let pageHandler: HttpHandler = Response.ofHtml page
 
-let clickHandler: HttpHandler = Response.ofHtml clickResponse
+let clickHandler (color: string) : HttpHandler = Response.ofHtml (clickResponse color)
 
-let endpoints = [ get pageRoute pageHandler; get clickRoute clickHandler ]
+let endpoints =
+    [ get pageRoute pageHandler
+      mapGet clickRoute (fun r -> r.GetString "color") clickHandler ]

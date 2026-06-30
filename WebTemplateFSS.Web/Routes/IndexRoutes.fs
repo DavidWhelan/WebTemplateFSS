@@ -2,4 +2,6 @@
 
 let pageRoute = "/"
 
-let clickRoute = "/click"
+let clickRoute = "/click/{color}"
+
+let clickURL color = clickRoute.Replace("{color}", color)
