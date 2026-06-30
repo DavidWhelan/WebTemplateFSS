@@ -17,19 +17,18 @@ let primary =
       Disabled = hex "D7E0D8" }
 
 let btn =
-    fss
-        "btn"
-        [ Padding.value (px 10, px 15)
-          BorderWidth.value (px 1)
-          BorderStyle.solid
-          BorderRadius.value (px 2)
-          FontSize.value (px 14)
-          Cursor.pointer ]
+    [ Padding.value (px 10, px 15)
+      BorderWidth.value (px 1)
+      BorderStyle.solid
+      BorderRadius.value (px 2)
+      FontSize.value (px 14)
+      Cursor.pointer ]
 
 let createButton (name: string) (colorSet: ColorSet) =
     fss
         name
-        [ BackgroundColor.value colorSet.Enabled
+        [ yield! btn
+          BackgroundColor.value colorSet.Enabled
           Color.white
           BorderColor.value colorSet.Enabled
           Hover [ BackgroundColor.value colorSet.Hover ]
