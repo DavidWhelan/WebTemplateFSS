@@ -9,8 +9,7 @@ open Routes
 
 let page =
     Layout.template
-        [ _h1 [] [ _text "Example: Hello World" ]
-          _button
+        [ _button
               [ _id_ "hello"
                 Ds.onClick (Ds.get IndexRoutes.clickRoute)
                 _classList_ [ styles.btn; styles.btnPrimary ] ]

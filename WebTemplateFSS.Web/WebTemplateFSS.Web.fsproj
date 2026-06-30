@@ -30,6 +30,7 @@
 
 	<ItemGroup>
 	  <ProjectReference Include="..\WebTemplateFss.GeneratedStyles\WebTemplateFss.GeneratedStyles.fsproj" />
+	  <ProjectReference Include="..\WebTemplateFSS.Style\WebTemplateFSS.Style.fsproj" />
 	</ItemGroup>
 
 
@@ -38,6 +39,6 @@
 	</Target>
 
 	<Target Name="FssBuild" AfterTargets="BeforeBuild" Condition="'$(DesignTimeBuild)' != 'true'">
-		<Exec Command="dotnet Fss.Build -v" ConsoleToMsBuild="true" IgnoreExitCode="false" WorkingDirectory="../"/>
+		<Exec Command="dotnet Fss.Build -v" ConsoleToMsBuild="true" IgnoreExitCode="false" WorkingDirectory="../" />
 	</Target>
 </Project>
