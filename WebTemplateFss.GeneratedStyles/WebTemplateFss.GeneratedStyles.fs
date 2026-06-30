@@ -1,5 +1,5 @@
 namespace WebTemplateFss.GeneratedStyles
 
 module styles =
-    let btn = "css-1058319098" 
-    let btnPrimary = "css75526244" 
+    let btn = "css1960034797" 
+    let btnPrimary = "css1032235405" 

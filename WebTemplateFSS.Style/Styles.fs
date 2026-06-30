@@ -19,13 +19,11 @@ let primary =
 let btn =
     fss
         "btn"
-        [ Padding.value (px 10, px 5)
-          BorderRadius.value (px 5)
+        [ Padding.value (px 10, px 15)
           BorderWidth.value (px 1)
           BorderStyle.solid
-          BorderColor.value primary.Enabled
-          FontSize.value (px 16)
-          FontWeight.bold
+          BorderRadius.value (px 2)
+          FontSize.value (px 14)
           Cursor.pointer ]
 
 let btnPrimary =
@@ -33,5 +31,7 @@ let btnPrimary =
         "btnPrimary"
         [ BackgroundColor.value primary.Enabled
           Color.white
+          BorderColor.value primary.Enabled
           Hover [ BackgroundColor.value primary.Hover ]
-          Active [ BackgroundColor.value primary.Active ] ]
+          Active [ BackgroundColor.value primary.Active ]
+          Disabled [ BackgroundColor.value primary.Disabled ] ]

@@ -36,4 +36,8 @@
 	<Target Name="FSharpLint" AfterTargets="BeforeBuild" Condition="'$(DesignTimeBuild)' != 'true'">
 		<Exec Command="dotnet fsharplint -f msbuild lint --lint-config $(MSBuildThisFileDirectory)/fsharplint.json $(MSBuildProjectFullPath)" ConsoleToMsBuild="true" IgnoreExitCode="false" />
 	</Target>
+
+	<Target Name="FssBuild" AfterTargets="BeforeBuild" Condition="'$(DesignTimeBuild)' != 'true'">
+		<Exec Command="dotnet Fss.Build -v" ConsoleToMsBuild="true" IgnoreExitCode="false" WorkingDirectory="../"/>
+	</Target>
 </Project>
