@@ -15,4 +15,5 @@ let page =
                 _classList_ [ styles.btn; styles.btnPrimary ] ]
               [ _text "Click Me" ] ]
 
-let clickResponse = _h2 [ _id_ "hello" ] [ _text "Hello, World, from Server!" ]
+let clickResponse =
+    _div [ _id_ "hello" ] [ _h2 [] [ _text "Hello, World, from Server!" ] ]

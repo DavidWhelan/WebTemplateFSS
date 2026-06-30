@@ -26,12 +26,14 @@ let btn =
           FontSize.value (px 14)
           Cursor.pointer ]
 
-let btnPrimary =
+let createButton (name: string) (colorSet: ColorSet) =
     fss
-        "btnPrimary"
-        [ BackgroundColor.value primary.Enabled
+        name
+        [ BackgroundColor.value colorSet.Enabled
           Color.white
-          BorderColor.value primary.Enabled
-          Hover [ BackgroundColor.value primary.Hover ]
-          Active [ BackgroundColor.value primary.Active ]
-          Disabled [ BackgroundColor.value primary.Disabled ] ]
+          BorderColor.value colorSet.Enabled
+          Hover [ BackgroundColor.value colorSet.Hover ]
+          Active [ BackgroundColor.value colorSet.Active ]
+          Disabled [ BackgroundColor.value colorSet.Disabled ] ]
+
+let btnPrimary = createButton "btnPrimary" primary
