@@ -8,6 +8,8 @@ type ColorSet =
       Active: Fss.Types.Color.Color
       Disabled: Fss.Types.Color.Color }
 
+
+//Color Palatte: https://colorhunt.co/palette/ebe1d141644a0d4715e9762b
 let primary =
     { Enabled = hex "0D4715"
       Hover = hex "35663C"
