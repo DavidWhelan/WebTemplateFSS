@@ -1,8 +1,6 @@
-﻿[<AutoOpen>]
-module Styles
+﻿module Styles.Buttons
 
 open Fss
-open Fss.Static
 open Colors
 
 let btn =
@@ -13,9 +11,8 @@ let btn =
       FontSize.value (px 14)
       Cursor.pointer ]
 
-let createButton (name: string) (colorSet: ColorSet) (textColor: Types.Color.Color) =
-    fss
-        name
+let createButton (colorSet: ColorSet) (textColor: Types.Color.Color) =
+    createFss
         [ yield! btn
           BackgroundColor.value colorSet.Enabled
           BorderColor.value colorSet.Enabled
@@ -24,6 +21,8 @@ let createButton (name: string) (colorSet: ColorSet) (textColor: Types.Color.Col
           Active [ BackgroundColor.value colorSet.Active; BorderColor.value colorSet.Active ]
           Disabled [ BackgroundColor.value colorSet.Disabled; BorderColor.value colorSet.Disabled ] ]
 
-let btnPrimary = createButton "btnPrimary" primary Types.Color.Color.White
-let btnSecondary = createButton "btnSecondary" secondary Types.Color.Color.White
-let btnTertiary = createButton "btnTertiary" tertiary Types.Color.Color.Black
+let btnPrimary, btnPrimaryStyle = createButton primary Types.Color.Color.White
+let btnSecondary, btnSecondaryStyle = createButton secondary Types.Color.Color.White
+let btnTertiary, btnTertiaryStyle = createButton tertiary Types.Color.Color.Black
+
+let btnStyles = [ btnPrimaryStyle; btnSecondaryStyle; btnTertiaryStyle ]
