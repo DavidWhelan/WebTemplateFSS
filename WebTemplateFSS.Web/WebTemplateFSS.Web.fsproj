@@ -33,10 +33,6 @@
 	  <ProjectReference Include="..\WebTemplateFSS.Style\WebTemplateFSS.Style.fsproj" />
 	</ItemGroup>
 
-	<Target Name="FssBuild" BeforeTargets="BeforeBuild" Condition="'$(DesignTimeBuild)' != 'true'">
-		<Exec Command="dotnet Fss.Build -v" ConsoleToMsBuild="true" IgnoreExitCode="false" WorkingDirectory="../" />
-	</Target>
-	
 	<Target Name="FSharpLint" AfterTargets="BeforeBuild" Condition="'$(DesignTimeBuild)' != 'true'">
 		<Exec Command="dotnet fsharplint -f msbuild lint --lint-config $(MSBuildThisFileDirectory)/fsharplint.json $(MSBuildProjectFullPath)" ConsoleToMsBuild="true" IgnoreExitCode="false" />
 	</Target>

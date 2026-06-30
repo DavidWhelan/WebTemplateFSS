@@ -10,7 +10,7 @@
       "rollForward": false
     },
     "fss-lib.builder": {
-      "version": "3.0.0",
+      "version": "3.0.1-beta",
       "commands": [
         "Fss.Build"
       ],

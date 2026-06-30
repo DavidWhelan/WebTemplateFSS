@@ -13,6 +13,16 @@ let page =
               [ _id_ "hello"
                 Ds.onClick (Ds.get IndexRoutes.clickRoute)
                 _classList_ [ styles.btnPrimary ] ]
+              [ _text "Click Me" ]
+          _button
+              [ _id_ "hello"
+                Ds.onClick (Ds.get IndexRoutes.clickRoute)
+                _classList_ [ styles.btnSecondary ] ]
+              [ _text "Click Me" ]
+          _button
+              [ _id_ "hello"
+                Ds.onClick (Ds.get IndexRoutes.clickRoute)
+                _classList_ [ styles.btnTertiary ] ]
               [ _text "Click Me" ] ]
 
 let clickResponse =
